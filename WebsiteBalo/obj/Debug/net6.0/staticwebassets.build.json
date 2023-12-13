@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "pxjNRm5P7ZunhaANLnmdnCEQlzOjdtS22Vi6m01wJzY=",
+  "Hash": "idxlQj03ZCb1yjhGMtHjPwQ9RMMLQ1VJAfdV6bEJz4U=",
   "Source": "WebsiteBalo",
   "BasePath": "_content/WebsiteBalo",
   "Mode": "Default",
@@ -1573,6 +1573,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\logo\\PHUOC_Logo.png"
+    },
+    {
+      "Identity": "C:\\Users\\phuoc\\Documents\\GitHub\\WebsiteBalo\\WebsiteBalo\\wwwroot\\images\\products\\balo-chong-soc-laptop-15-tomtoc-usa-a82-f01d-black-10.png",
+      "SourceId": "WebsiteBalo",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\phuoc\\Documents\\GitHub\\WebsiteBalo\\WebsiteBalo\\wwwroot\\",
+      "BasePath": "_content/WebsiteBalo",
+      "RelativePath": "images/products/balo-chong-soc-laptop-15-tomtoc-usa-a82-f01d-black-10.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\products\\balo-chong-soc-laptop-15-tomtoc-usa-a82-f01d-black-10.png"
     },
     {
       "Identity": "C:\\Users\\phuoc\\Documents\\GitHub\\WebsiteBalo\\WebsiteBalo\\wwwroot\\images\\products\\Balo-Laptop-15,6inch-Kmore-The-Wesley-Tan.png",

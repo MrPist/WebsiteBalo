@@ -49,5 +49,10 @@ namespace WebsiteBalo.Controllers
         {
           return (_context.Mathangs?.Any(e => e.MaMh == id)).GetValueOrDefault();
         }
+        public IActionResult Login(string email, string matkhau) 
+        { 
+            
+            return View();
+        }
     }
 }

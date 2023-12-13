@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WebsiteBalo")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+086555e216a340a294e9e753ebd5ef57c6f32b4e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("WebsiteBalo")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WebsiteBalo")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
