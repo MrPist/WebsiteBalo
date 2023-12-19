@@ -78,7 +78,7 @@
 					<div class="col-lg-2 col-md-2 col-12">
 						<!-- Logo -->
 						<div class="logo">
-							<a href="index.html"><img src="images/logo/PHUOC.png" alt="logo"></a>
+							<a asp-controller="Home" asp-action="Index"><img src="images/logo/PHUOC.png" alt="logo"></a>
 						</div>
 						<!--/ End Logo -->
 						<!-- Search Form -->
@@ -99,15 +99,9 @@
 					<div class="col-lg-8 col-md-7 col-12">
 						<div class="search-bar-top">
 							<div class="search-bar">
-								<select>
-									<option selected="selected">All Category</option>
-									<option>watch</option>
-									<option>mobile</option>
-									<option>kid’s item</option>
-								</select>
-								<form>
-									<input name="search" placeholder="Search Products Here....." type="search">
-									<button class="btnn"><i class="ti-search"></i></button>
+								<form asp-action="ProductsByName">
+									<input name="keyword" placeholder="Search Products Here....." type="search">
+									<button class="btnn"><i class="bi bi-search"></i></button>
 								</form>
 							</div>
 						</div>
@@ -115,22 +109,16 @@
 					<div class="col-lg-2 col-md-3 col-12">
 						<div class="right-bar">
 							<!-- Search Form -->
-							<div class="sinlge-bar">
-								<a href="#" class="single-icon"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
-							</div>
-							<div class="sinlge-bar">
-								<a href="#" class="single-icon"><i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
-							</div>
 							<div class="sinlge-bar shopping">
 								<a href="#" class="single-icon"><i class="ti-bag"></i> <span class="total-count">2</span></a>
 								<!-- Shopping Item -->
 								<div class="shopping-item">
 									<div class="dropdown-cart-header">
 										<span>2 Items</span>
-										<a href="#">View Cart</a>
+										<a asp-action="ViewCart">View Cart</a>
 									</div>
 									<ul class="shopping-list">
-										<li>
+										@* <li>
 											<a href="#" class="remove" title="Remove this item"><i class="fa fa-remove"></i></a>
 											<a class="cart-img" href="#"><img src="https://via.placeholder.com/70x70" alt="#"></a>
 											<h4><a href="#">Woman Ring</a></h4>
@@ -147,8 +135,8 @@
 										<div class="total">
 											<span>Total</span>
 											<span class="total-amount">$134.00</span>
-										</div>
-										<a href="checkout.html" class="btn animate">Checkout</a>
+										</div> *@
+										<a asp-action="CreateBill" class="btn animate">Checkout</a>
 									</div>
 								</div>
 								<!--/ End Shopping Item -->
@@ -170,25 +158,31 @@
 									<div class="navbar-collapse">
 										<div class="nav-inner">
 											<ul class="nav main-menu menu navbar-nav">
-												<li class="active"><a href="#">Home</a></li>
-												<li><a href="#">Product</a></li>
-												<li><a href="#">Service</a></li>
+												<li class="active"><a asp-action="Index">Home</a></li>
 												<li>
-													<a href="#">Shop<i class="ti-angle-down"></i><span class="new">New</span></a>
+													<a href="#">Product</a>
+													<ul class="dropdown-item">
+
+													</ul>
+												</li>
+												<li>
+													<a>Manufactuner</a>
 													<ul class="dropdown">
-														<li><a href="shop-grid.html">Shop Grid</a></li>
+														@foreach (var i in (List<Danhmuc>)ViewBag.danhmuc)
+														{
+															<li><a class="dropdown-item" asp-action="Index1" asp-route-id="@i.MaDm">@i.Ten</a></li>
+														}
+													</ul>
+												</li>
+												<li>
+													<a>Shop<i class="ti-angle-down"></i><span class="new">New</span></a>
+													<ul class="dropdown">
 														<li><a href="cart.html">Cart</a></li>
 														<li><a href="checkout.html">Checkout</a></li>
 													</ul>
 												</li>
 												<li><a href="#">Pages</a></li>
-												<li>
-													<a href="#">Blog<i class="ti-angle-down"></i></a>
-													<ul class="dropdown">
-														<li><a href="blog-single-sidebar.html">Blog Single Sidebar</a></li>
-													</ul>
-												</li>
-												<li><a href="contact.html">Contact Us</a></li>
+												<li><a href="#">Contact Us</a></li>
 											</ul>
 										</div>
 									</div>

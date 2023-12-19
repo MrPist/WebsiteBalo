@@ -14,6 +14,11 @@ namespace WebsiteBalo.Controllers
     {
         private readonly ApplicationDbContext _context;
 
+        void GetInfo()
+        {
+            ViewBag.danhmuc = _context.Danhmucs.ToList();
+            //ViewData["solg"] = GetCartItems().Count();
+        }
         public HomeController(ApplicationDbContext context)
         {
             _context = context;
@@ -22,6 +27,7 @@ namespace WebsiteBalo.Controllers
         // GET: Home
         public async Task<IActionResult> Index()
         {
+            GetInfo();
             var applicationDbContext = _context.Mathangs.Include(m => m.MaDmNavigation);
             return View(await applicationDbContext.ToListAsync());
         }
@@ -29,6 +35,7 @@ namespace WebsiteBalo.Controllers
         // GET: Home/Details/5
         public async Task<IActionResult> Details(int? id)
         {
+            GetInfo();
             if (id == null || _context.Mathangs == null)
             {
                 return NotFound();
@@ -50,9 +57,15 @@ namespace WebsiteBalo.Controllers
           return (_context.Mathangs?.Any(e => e.MaMh == id)).GetValueOrDefault();
         }
         public IActionResult Login(string email, string matkhau) 
-        { 
-            
+        {
+            GetInfo();
             return View();
+        }
+        public async Task<IActionResult> ProductsByName(string keyword)
+        {
+            GetInfo();
+            var mathang = _context.Mathangs.Where(p => p.Ten.Contains(keyword));
+            return View(await mathang.ToListAsync());
         }
     }
 }
